@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6f8fa;
+}
+
+p {
+    display: inline;
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    width: 100px;
+}
+
+button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+main {
+    background-color: #fff;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .04), 0 7px 5px rgba(0, 0, 0, .02), 0 13px 10px rgba(0, 0, 0, .02), 0 22px 17px rgba(0, 0, 0, .02), 0 0 1px 0 rgba(27, 31, 35, .3);
+}
+
+.search {
+    position: relative;
+    background-color: #24292e;
+    padding: 10px;
+}
+
+.search svg {
+    color: #fff;
+    fill: currentColor;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.search input {
+    padding: 5px;
+    background-color: #404448;
+    border-radius: 3px;
+    border: 1px solid #404448;
+    outline: none;
+    color: #fff;
+}
+
+.search button {
+    width: 80px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #1074e7;
+    border: 1px solid #1074e7;
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+}
+
+.search .loading {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    background-image: url(./img/loading.gif);
+    background-size: contain;
+    background-position: top;
+
+}
+
+.repoList ul li {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #e1e4e8;
+    border-top: none;
+    line-height: 1.25;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.repoList svg {
+    min-width: 16px;
+    margin-right: 8px;
+    fill: #6a737d;
+}
+
+.repoList .repoName {
+    font-weight: 400;
+    color: #0366d6 !important;
+    padding-right: 10px;
+    width: 60%;
+
+}
+
+.repoList .repoName,
+.repoList .repoStars,
+.repoList .repoLastCommit,
+.repoList .repoGithub {
+    display: flex;
+    align-items: center;
+}
+
+.repoList .repoName a{
+    width: 90%;
+}
+
+.repoList .repoStars {
+    width: 15%;
+}
+
+.repoList .repoLastCommit {
+    width: 20%;
+}
+
+
+.pagination {
+    width: 200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.pagination__page {
+    margin-bottom: 20px;
+}
+
+.currentPage {
+    border-radius: 2px;
+    padding: 2px;
+    font-size: 18px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+
+/* CARD */
+
+.card {
+    display: flex;
+    margin-top: 10%;
+    padding: 20px;
+    position: relative;
+    width: 75%;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .04), 0 7px 5px rgba(0, 0, 0, .02), 0 13px 10px rgba(0, 0, 0, .02), 0 22px 17px rgba(0, 0, 0, .02), 0 0 1px 0 rgba(27, 31, 35, .3) !important;
+}
+
+.card .repo {
+    width: 75%;
+}
+
+.card .repo .repoName {
+    font-weight: 400;
+    color: #0366d6 !important;
+}
+.card .repo .repoStars,
+.card .repo .repoLastCommit {
+    display: flex;
+}
+
+.card .repo svg {
+    margin-right: 5px;
+    fill: #6a737d;
+}
+
+.card .repoName,
+.card .repoLastCommit,
+.card .description,
+.card .languages {
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+.card .repoName a {
+    cursor: pointer;
+}
+
+.card .user {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20%;
+}
+
+.card .user__avatar {
+    height: 100%;
+}
+
+.card .user .user__avatar img{
+    width: 100%;
+}
+
+.card .user .user__nickname {
+    text-align: center;
+    word-break: break-all;
+}
+
+.card .contributors__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card .contributors__item {
+    margin-right: 5px;
+}
+
+.card .contributors__item img {
+    width: 25px !important;
+}
+
+
+
+
+/* MEDIA */
+@media (max-width: 700px)  {
+    .repoList ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .repoList ul li {
+        width: 50%;
+        flex-direction: column;
+    }
+    .repoList ul li  div{
+        width: 100%;
+    }
+
+    .repoList .repoName,
+    .repoList .repoStars,
+    .repoList .repoLastCommit {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px)  {
+    .repoList ul li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 268px)  {
+    .search svg {
+        display: none;
+    }
+}
